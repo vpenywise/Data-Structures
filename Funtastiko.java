@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 
 public class Funtastiko {
@@ -29,6 +30,7 @@ public class Funtastiko {
 
         ArrayList<Merchandize> arrayMerchandizes = new ArrayList<Merchandize>();
         LinkedList<Merchandize> linkedMerchandizes = new LinkedList<Merchandize>();
+        HashSet<Merchandize> hashSet = new HashSet<Merchandize>();
 
         arrayMerchandizes.add(new Merchandize("Tomato", 2.59, false));
         arrayMerchandizes.add(new Merchandize("Yogurth", 1.19, true));
@@ -36,14 +38,22 @@ public class Funtastiko {
         linkedMerchandizes.add(new Merchandize("Sushi", 15.59, false));
         linkedMerchandizes.add(new Merchandize("Beer", 2.19, true));
 
+        hashSet.add(new Merchandize("Potatoes", 1.99, false));
+        hashSet.add(new Merchandize("Wasabi", 4.99, true));
 
-        for (Merchandize arrMerchandize : arrayMerchandizes) {
-            System.out.println("Merchandize from an ArrayList: " + arrMerchandize);
-        }
+        for (Merchandize arrMerchandise : arrayMerchandizes) {
+            System.out.println("Merchandise from an ArrayList: " + arrMerchandise);
+        }        System.out.println();
+
 
         for (Merchandize linkMerchendize : linkedMerchandizes) {
-            System.out.println("Merchandize from a LinkedList: " + linkMerchendize);
-        }
+            System.out.println("Merchandise from a LinkedList: " + linkMerchendize);
+        }        System.out.println();
+
+        for (Merchandize hashSet1 : hashSet) {
+            System.out.println("Merchandise from an HashSet: " + hashSet1);
+        }        System.out.println();
+
 
     }
 
