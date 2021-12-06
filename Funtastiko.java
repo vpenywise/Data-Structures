@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Funtastiko {
 
@@ -15,10 +12,9 @@ public class Funtastiko {
 
         for (Employees employee : employees) {
             System.out.println("Getting info from an Array of Objects: " + employee);
-        }
-        System.out.println();
+        }       System.out.println();
 
-        HashMap<Integer, String> hashMap = new HashMap<Integer, String >();
+        HashMap<Integer, String> hashMap = new HashMap<Integer, String>();
         hashMap.put(12345, "Kiro Kirov");
         hashMap.put(67899, "Genadi Genadiev");
         hashMap.put(121215, "Mincho Minchev");
@@ -29,8 +25,20 @@ public class Funtastiko {
         System.out.println();
 
         ArrayList<Merchandize> arrayMerchandizes = new ArrayList<Merchandize>();
+        // better for storing + accessing data, HOWEVER it's slow for manipulation
+        // automatically resizes itself
+
         LinkedList<Merchandize> linkedMerchandizes = new LinkedList<Merchandize>();
+        // every element is a separate object with a data part and address part
+        // due to the dynamicity and ease of insertions and deletions, they are preferred over the arrays
+
         HashSet<Merchandize> hashSet = new HashSet<Merchandize>();
+        //NO order + NO duplicates / uniqueness of data
+        //Generate hashCode + equals() will override the default .equals method
+
+        LinkedHashSet<Merchandize> linkedHashSet = new LinkedHashSet<Merchandize>();
+        //Ordered + NO duplicates / uniqueness of data
+        //Generate hashCode + equals() will override the default .equals method
 
         arrayMerchandizes.add(new Merchandize("Tomato", 2.59, false));
         arrayMerchandizes.add(new Merchandize("Yogurth", 1.19, true));
@@ -40,6 +48,9 @@ public class Funtastiko {
 
         hashSet.add(new Merchandize("Potatoes", 1.99, false));
         hashSet.add(new Merchandize("Wasabi", 4.99, true));
+
+        linkedHashSet.add(new Merchandize("Bread", 1.29, false));
+        linkedHashSet.add(new Merchandize("Waffle", 2.99, true));
 
         for (Merchandize arrMerchandise : arrayMerchandizes) {
             System.out.println("Merchandise from an ArrayList: " + arrMerchandise);
@@ -53,6 +64,11 @@ public class Funtastiko {
         for (Merchandize hashSet1 : hashSet) {
             System.out.println("Merchandise from an HashSet: " + hashSet1);
         }        System.out.println();
+
+        for (Merchandize linkedHashSet1 : linkedHashSet) {
+            System.out.println("Merchandise from a LinkedHashSet: " + linkedHashSet1);
+        }       System.out.println();
+
 
 
     }
