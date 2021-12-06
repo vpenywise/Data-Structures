@@ -19,8 +19,16 @@ public class Funtastiko {
         hashMap.put(67899, "Genadi Genadiev");
         hashMap.put(121215, "Mincho Minchev");
 
+        LinkedHashMap<Integer, String> linkedHashMap = new LinkedHashMap<Integer, String>();
+        linkedHashMap.put(616135, "Mecho Mechov");
+        linkedHashMap.put(858263, "Dudi Dudev");
+        linkedHashMap.put(996135, "Koko Kokov");
+
         System.out.println("Getting info from an Array of a Hash Map: " + hashMap);
         System.out.println(hashMap.containsValue("Kiro Kirov"));
+
+        System.out.println("\nGetting info from an Array of a Linked Hash Map: " + linkedHashMap);
+        System.out.println(linkedHashMap.containsKey(616135));
 
         System.out.println();
 
