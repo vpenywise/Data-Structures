@@ -1,0 +1,45 @@
+package com.vlado.datastructures;
+
+// Constant time complexity O(1)
+import java.util.Arrays;
+
+public class ConstantTimeComplexity {
+
+    public static void main(String[] args) {
+
+        simpleFunction(10);
+
+        int[] array1 = {10};
+        simpleFunctionArray(array1);
+
+        int[] array4 = {10, 20};
+        simpleFunctionArray(array4);
+
+        simpleFunction3args(10, 20, 5);
+        simpleFunction3args(100, 150, 10);
+
+    }
+
+    // Constant time complexity O(1)
+    private static void simpleFunction(int n) {
+        System.out.println("Input argument is: " + n);
+    }
+
+    private static void simpleFunctionArray(int[] simpleArray) {
+        System.out.println("\nSimple array.toString() " + Arrays.toString(simpleArray));
+
+        for(int i = 0; i < 3; i++) {
+            System.out.println("Class of array object: " + simpleArray.getClass());
+        }
+    }
+
+    private static void simpleFunction3args(int a, int b, int c) {
+        int sum = a + b;
+        int product = a * b * c;
+        int quotient = a * b / c;
+
+        System.out.println("\na + b: " + sum);
+        System.out.println("a * b * c: " + product);
+        System.out.println("a / b * c: " + quotient);
+    }
+}
