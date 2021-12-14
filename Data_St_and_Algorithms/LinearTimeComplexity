@@ -1,0 +1,67 @@
+package com.vlado.datastructures;
+
+// Linear time complexity O(N)
+public class LinearTimeComplexity {
+
+    public static void main(String[] args) {
+
+        int[] array1 = {10, 20, 30, 40, 50};
+        System.out.println("\nArray 1");
+//        simpleForLoop(array1);
+//        simpleWhileLoop(array1);
+//        anotherForLoop(array1);
+        forForLoop(array1);
+
+        int[] array4 = {10, 20, 30, 40, 50, 60};
+        System.out.println("\nArray 2");
+//        simpleForLoop(array4);
+//        simpleWhileLoop(array4);
+//        anotherForLoop(array4);
+        forForLoop(array4);
+
+        int[] array5 = {10, 20, 30, 40, 50, 60, 70};
+        System.out.println("\nArray 5");
+//        simpleWhileLoop(array5);
+//        simpleWhileLoop(array5);
+//        anotherForLoop(array5);
+        forForLoop(array5);
+
+    }
+
+    // Linear time complexity O(N)
+    private static void simpleForLoop(int[] forLoopArray) {
+        for (int j : forLoopArray) {
+            System.out.println("Number: " + j + " Square: " + j * j);
+        }
+    }
+
+    private static void simpleWhileLoop(int[] simpleWhileArray) {
+        int i = 0;
+        while (i < simpleWhileArray.length) {
+            System.out.println("Number: " + simpleWhileArray[i] + " Square: " + simpleWhileArray[i] * simpleWhileArray[i]);
+            i++;
+        }
+    }
+
+    private static void anotherForLoop(int[] anotherForArray) {
+        if (anotherForArray.length % 2 != 0) {
+            // This is a O(1) operation
+            System.out.println("The length of the array is odd");
+        } else {
+            //  This is a O(N) operation
+            for (int j : anotherForArray) {
+                System.out.println("Number: " + j + " Square: " + j * j);
+            }
+        }
+    }
+
+    private static void forForLoop (int[] forFOrArray) {
+        for (int j : forFOrArray) {
+            System.out.println("Number: " + j + " Square: " + j * j);
+        }
+        for (int i= 0; i < 10000; i++) {
+            System.out.println("Printing 10000 times");
+        }
+    }
+
+}
